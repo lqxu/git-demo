@@ -48,7 +48,7 @@ gulp.task('image',function(){
 //4. html压缩
 var htmlMin = require('gulp-htmlmin');
 gulp.task('html',function(){
-	gulp.src('src/index.html')
+	gulp.src(['src/index.html','src/login/*.html'],{base:'src'})
 		.pipe(htmlMin({collapseWhitespace: true}))
 		.pipe(gulp.dest('dist'))
 		.pipe(browserSync.reload({
