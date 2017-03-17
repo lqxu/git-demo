@@ -45,7 +45,7 @@ gulp.task('image',function(){
 		}));
 });
 
-//4. html压缩
+//4. html压缩，多个html拷贝
 var htmlMin = require('gulp-htmlmin');
 gulp.task('html',function(){
 	gulp.src(['src/index.html','src/login/*.html'],{base:'src'})
